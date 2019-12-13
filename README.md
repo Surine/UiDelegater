@@ -4,8 +4,8 @@
 
 > 做Android的话经常会写很多shape来实现圆角，渐变等效果。特别是UI效果不统一的时候，这种情况更加明显，要是仅仅为了改变个圆角尺寸又写一个xml真的是脑袋都大了。也不清楚官方为啥不给一个。
 > 
-> 下面是两种解决方案，本质上都是通过属性直接设置，减少了书写xml，这样的话，如果样式统一，就可以采用style框起来，如果不统一，就直接在View上设置属性，非常方便。
-> 注入实现方案：[https://github.com/Surine/UiDelegater](https://github.com/Surine/UiDelegater)
+> 下面是两种解决方案，本质上都是通过属性直接设置，减少了书写xml，这样的话，如果样式统一，就可以采用style框起来，如果不统一，就直接在View上设置属性，非常方便。<br>
+> 注入实现方案：[https://github.com/Surine/UiDelegater](https://github.com/Surine/UiDelegater)<br>
 > 自定义View实现方案：[https://github.com/Surine/LazyAndroid](https://github.com/Surine/LazyAndroid)
 > 
 > 此外，要特别说明一下，这两个库，目前仅仅是做学习使用，如果你想自己实现，可以参考一下我写的，相对来说还算通俗易懂，大神写的太难懂了…… 我本质上是喜欢用自己做的东西，除非像OkHttp，Retrofit，Glide这种大型的库会采用第三方，其他的都会自己写顺便学习思想。大神的库已经很多star了，我就不再这里班门弄斧了，如果有同学想采用这两种技术方案可以搜对应的库，这里我写的[UiDelegater](https://github.com/Surine/UiDelegater)的思想是基于BackgroundLibrary 这个库[https://github.com/JavaNoober/BackgroundLibrary](https://github.com/JavaNoober/BackgroundLibrary)
@@ -15,10 +15,10 @@ UiDelegater是一个使用Ui注入的方式来实现Shape效果的库，主要�
 
 ### P2
 #### 使用条件
-项目代码目前是在**androidx.AppCompatActivity**条件下运行测试的，原理也是基于**AppCompatActivity**的UI代理方式实现，v7包也可以支持的。所以这就要求您的Activity必须继承自**AppCompatActivity，**同理如果您使用其他组件，如Fragment等也可以支持。
+项目代码目前是在**androidx.AppCompatActivity**条件下运行测试的，原理也是基于**AppCompatActivity**的UI代理方式实现，v7包也可以支持的。所以这就要求您的Activity必须继承自**AppCompatActivity**同理如果您使用其他组件，如Fragment等也可以支持。
 
 #### 使用方法
-实现注入效果需要继承自**UisBaseActivity **，我们项目中一般会有**BaseActivity**，直接令他继承自**UisBaseActivity **即可，当然如果实在没法继承，可以调用 **Uix.init**方法来初始化，注意一定要super.onCreate(savedInstanceState)之前。
+实现注入效果需要继承自**UisBaseActivity **，我们项目中一般会有**BaseActivity**，直接令他继承自**UisBaseActivity**即可，当然如果实在没法继承，可以调用 **Uix.init**方法来初始化，注意一定要super.onCreate(savedInstanceState)之前。
 
 ```java
 @Override
@@ -55,7 +55,7 @@ UiDelegater是一个使用Ui注入的方式来实现Shape效果的库，主要�
         app:strokeWidth="2dp" />
 ```
 
-如上述View, 像**app:color**就是设置shape背景色， **app:radius **就是设置半径，但是作为Android的一个规则，上述自定义的代码不会有补全提示（好奇约束布局的提示为啥好用……，可能是父布局的原因）
+如上述View, 像**app:color**就是设置shape背景色， **app:radius**就是设置半径，但是作为Android的一个规则，上述自定义的代码不会有补全提示（好奇约束布局的提示为啥好用……，可能是父布局的原因）
 
 #### 代码补全
 
