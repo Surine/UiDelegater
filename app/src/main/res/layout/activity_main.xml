@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Hello World!"
+		app:radius="10dp"
+        app:color="@color/colorPrimary"
+        app:pressColor="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="@id/button"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:tag="color:#fff|radius:20dp"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        app:color="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pressColor="@color/colorPrimary"
+        app:radius="40dp"
+        app:startColor="#B86A6A"
+        app:centerColor="#6E0A0A"
+        app:endColor="#DCC1C1"
+        app:orientation="BL_TR"
+        app:gradientRadius="40dp"
+        app:gradient="RADIAL"
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="2dp" />
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入..."
+        app:radius="40dp"
+        android:paddingStart="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:color="#704170"
+        android:paddingEnd="20dp"
+        app:focusColor="#461515"
+        android:textColor="#fff"
+        android:textColorHint="#908B8B"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edittext" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/img"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
