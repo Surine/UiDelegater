@@ -72,7 +72,7 @@ UiDelegater是一个使用Ui注入的方式来实现Shape效果的库，主要�
 
 
 #### 高级功能
-虽然Android规定一个Activity只能用一个UI代理，但是我们可以在代理中做很多事情，所以这里我用**StrategyManager**管理Ui处理策略，默认是三个，字体，主题和Shape的，其中前两个为预留的，目前仅实现ViewStrategy，我们也可以实现自己的策略，添加到管理器里即可实现效果
+虽然Android规定一个Activity只能用一个UI委托，但是我们可以在委托的工厂中做很多事情，所以这里我用**StrategyManager**管理Ui处理策略，默认是三个，字体，主题和Shape的，其中前两个为预留的，目前仅实现ViewStrategy，我们也可以实现自己的策略，添加到管理器里即可实现效果
 ```java
  private StrategyManager() {
         uiStrategies.add(new FontStrategy());
