@@ -15,7 +15,7 @@ UiDelegater是一个使用Ui注入的方式来实现Shape效果的库，主要�
 
 ### P2
 #### 使用条件
-项目代码目前是在**androidx.AppCompatActivity**条件下运行测试的，原理也是基于**AppCompatActivity**的UI代理方式实现，v7包也可以支持的。所以这就要求您的Activity必须继承自**AppCompatActivity**同理如果您使用其他组件，如Fragment等也可以支持。
+项目代码目前是在**androidx.AppCompatActivity**条件下运行测试的，原理也是基于**AppCompatActivity**的UI委托方式实现，v7包也可以支持的。所以这就要求您的Activity必须继承自**AppCompatActivity**同理如果您使用其他组件，如Fragment等也可以支持。
 
 #### 使用方法
 实现注入效果需要继承自**UisBaseActivity **，我们项目中一般会有**BaseActivity**，直接令他继承自**UisBaseActivity**即可，当然如果实在没法继承，可以调用 **Uix.init**方法来初始化，注意一定要super.onCreate(savedInstanceState)之前。
